@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://djyuhuadnqmik"]
+
+[sub_resource type="Gradient" id="Gradient_f42sw"]
+colors = PackedColorArray(0.0784314, 0.317647, 0.380392, 1, 0.164706, 0.121569, 0.243137, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x43ey"]
+gradient = SubResource("Gradient_f42sw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[node name="Battlefield" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(31.2188, 18.0313)
+texture = SubResource("GradientTexture2D_x43ey")

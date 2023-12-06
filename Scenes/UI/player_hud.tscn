@@ -1,0 +1,172 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwekw4h4mdkr8"]
+
+[ext_resource type="Texture2D" uid="uid://cndq5nuedas45" path="res://Assets/Sprites/UI/Blank Background.png" id="1_gcaxs"]
+[ext_resource type="Texture2D" uid="uid://ctko5honnaciv" path="res://Assets/Sprites/UI/Character.png" id="2_euf6m"]
+[ext_resource type="Texture2D" uid="uid://dt312eysnjew3" path="res://Assets/Icons/Icon_AP_Outline.png" id="3_esr78"]
+[ext_resource type="Texture2D" uid="uid://b0xaheqsqqa3n" path="res://Assets/Icons/Icon_AP_Solid.png" id="4_k4iuq"]
+[ext_resource type="Texture2D" uid="uid://ye6eoysfilsu" path="res://Assets/Sprites/UI/HealthBarUnder.png" id="5_wt3ld"]
+[ext_resource type="Texture2D" uid="uid://bviilco5cy2il" path="res://Assets/Sprites/UI/HealthBarOver.png" id="6_tgvil"]
+[ext_resource type="Texture2D" uid="uid://c51hjug8omx7d" path="res://Assets/Sprites/UI/HealthBarProgress.png" id="7_lb2hm"]
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Player Info" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/Player Info"]
+clip_children = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_gcaxs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Player Info/Avatar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_euf6m")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Player Stats" type="VBoxContainer" parent="MarginContainer/Player Info"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="Action Points" type="HBoxContainer" parent="MarginContainer/Player Info/Player Stats"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Action Point 1" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_esr78")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Fill" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points/Action Point 1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k4iuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Action Point 2" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_esr78")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Fill" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points/Action Point 2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k4iuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Action Point 3" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_esr78")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Fill" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points/Action Point 3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k4iuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Action Point 4" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_esr78")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Fill" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points/Action Point 4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k4iuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Action Point 5" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_esr78")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Fill" type="TextureRect" parent="MarginContainer/Player Info/Player Stats/Action Points/Action Point 5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k4iuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/Player Info/Player Stats"]
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+value = 79.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_wt3ld")
+texture_over = ExtResource("6_tgvil")
+texture_progress = ExtResource("7_lb2hm")
+tint_under = Color(0.65098, 0.65098, 0.65098, 1)
+
+[node name="Status Text" type="Label" parent="MarginContainer/Player Info/Player Stats"]
+layout_mode = 2
+text = "Current Status:"
