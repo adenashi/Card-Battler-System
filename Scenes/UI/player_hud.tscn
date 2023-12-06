@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwekw4h4mdkr8"]
+[gd_scene load_steps=10 format=3 uid="uid://bwekw4h4mdkr8"]
 
 [ext_resource type="Texture2D" uid="uid://cndq5nuedas45" path="res://Assets/Sprites/UI/Blank Background.png" id="1_gcaxs"]
 [ext_resource type="Texture2D" uid="uid://ctko5honnaciv" path="res://Assets/Sprites/UI/Character.png" id="2_euf6m"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ye6eoysfilsu" path="res://Assets/Sprites/UI/HealthBarUnder.png" id="5_wt3ld"]
 [ext_resource type="Texture2D" uid="uid://bviilco5cy2il" path="res://Assets/Sprites/UI/HealthBarOver.png" id="6_tgvil"]
 [ext_resource type="Texture2D" uid="uid://c51hjug8omx7d" path="res://Assets/Sprites/UI/HealthBarProgress.png" id="7_lb2hm"]
+[ext_resource type="Texture2D" uid="uid://cr8mrqc5t1bvr" path="res://Assets/Icons/Deck.png" id="8_7fuqd"]
+[ext_resource type="Texture2D" uid="uid://oyjibaawyhx" path="res://Assets/Sprites/UI/Circle.png" id="9_j2i40"]
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -15,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -23,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
@@ -170,3 +174,39 @@ tint_under = Color(0.65098, 0.65098, 0.65098, 1)
 [node name="Status Text" type="Label" parent="MarginContainer/Player Info/Player Stats"]
 layout_mode = 2
 text = "Current Status:"
+
+[node name="Deck Button" type="TextureButton" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("8_7fuqd")
+texture_pressed = ExtResource("8_7fuqd")
+texture_hover = ExtResource("8_7fuqd")
+texture_disabled = ExtResource("8_7fuqd")
+texture_focused = ExtResource("8_7fuqd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Deck Button"]
+show_behind_parent = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 12.37
+offset_top = -25.565
+offset_right = 72.37
+offset_bottom = 34.435
+texture = ExtResource("9_j2i40")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Deck Count" type="Label" parent="MarginContainer/Deck Button/TextureRect"]
+layout_mode = 0
+offset_top = 3.485
+offset_right = 59.0
+offset_bottom = 54.485
+theme_override_colors/font_color = Color(0.109804, 0.109804, 0.109804, 1)
+theme_override_font_sizes/font_size = 28
+text = "78"
+horizontal_alignment = 1
+vertical_alignment = 1

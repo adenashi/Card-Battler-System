@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://3h61ovey8y33"]
+
+[ext_resource type="Texture2D" uid="uid://cl0fp1mitiyo4" path="res://Assets/Sprites/Black Pawn.png" id="1_losir"]
+[ext_resource type="Script" path="res://Scripts/Components/BaseTarget.gd" id="2_sjlc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux73n"]
+size = Vector2(286, 406)
+
+[node name="BaseTarget" type="Sprite2D"]
+texture = ExtResource("1_losir")
+script = ExtResource("2_sjlc8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ux73n")
+
+[connection signal="input_event" from="Area2D" to="." method="OnClick"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BaseCardData" load_steps=2 format=3 uid="uid://bq2vqtrtf7oby"]
+
+[ext_resource type="Script" path="res://Scripts/DataStructures/BaseCardData.gd" id="1_5r2xa"]
+
+[resource]
+script = ExtResource("1_5r2xa")
+CardID = 0
+CardName = "Attack"
+CardType = "TARGETED"
+CardText = "+1 Damage"
+CardCost = 1
+Attack = 1
+Defense = 0
+CardImage = "res://Assets/Cards/Weapon.png"
+Effects = Array[String](["Attack"])

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BaseCardData" load_steps=2 format=3 uid="uid://8m4pjrovyq4a"]
+
+[ext_resource type="Script" path="res://Scripts/DataStructures/BaseCardData.gd" id="1_cm0wh"]
+
+[resource]
+script = ExtResource("1_cm0wh")
+CardID = 2
+CardName = "Poison"
+CardType = "NON_TARGETED"
+CardText = "+1 Damage every turn"
+CardCost = 3
+Attack = 0
+Defense = 0
+CardImage = "res://Assets/Cards/Ingredient.png"
+Effects = Array[String](["Poison"])

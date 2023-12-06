@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BaseCardData" load_steps=2 format=3 uid="uid://cqffmqpsup37g"]
+
+[ext_resource type="Script" path="res://Scripts/DataStructures/BaseCardData.gd" id="1_64cki"]
+
+[resource]
+script = ExtResource("1_64cki")
+CardID = 1
+CardName = "Heal"
+CardType = "SELF"
+CardText = "+1 Health"
+CardCost = 2
+Attack = 0
+Defense = 0
+CardImage = "res://Assets/Cards/Ingredient.png"
+Effects = Array[String](["Heal"])
