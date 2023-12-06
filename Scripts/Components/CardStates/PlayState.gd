@@ -3,6 +3,7 @@ extends CardState
 
 
 func EnterState() -> bool:
+	PlayCard()
 	return true
 
 
@@ -16,13 +17,16 @@ func PlayCard():
 					else:
 						SM.UpdateState(CardStateMachine.State.HAND)
 				"SELF":
-					SM.UpdateState(CardStateMachine.State.PLAYED)
+					SM.Owner.Play()
+					SM.Owner.Player.UpdateActionPoints(-SM.Owner.CardData.CardCost)
 				"NON_TARGETED":
-					SM.UpdateState(CardStateMachine.State.PLAYED)
+					SM.Owner.Play()
+					SM.Owner.Player.UpdateActionPoints(-SM.Owner.CardData.CardCost)
 	
 	DiscardCard()
 
 
 func DiscardCard():
 	# Send SM.Owner.CardData to DeckManager to add to Discard Pile
+	print("Card played.")
 	SM.Owner.queue_free()

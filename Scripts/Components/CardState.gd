@@ -19,7 +19,7 @@ func MouseExit():
 	pass
 
 
-func Input(event : InputEvent):
+func Input(_event : InputEvent):
 	pass
 
 
